@@ -1,11 +1,19 @@
 # README
 
-## rails newのコマンド
-rails new . -d=mysql -j=esbuild -c=sass --skip-test
+## データベース
+MySQL5.7
 
-## 環境構築
+## JS
+esbuild
+
+## CSS
+Sass & Bootstrap
+
+## 環境構築方法
 
 ```
 docker compose run --rm web bin/rails db:create
+dc run --rm web yarn build
+dc run --rm web yarn build:css
 docker compose up
 ```
