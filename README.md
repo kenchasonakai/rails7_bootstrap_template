@@ -1,4 +1,5 @@
 # README
+Topページ変えたり、新しいページ作って使用してください
 
 ## データベース
 MySQL5.7
@@ -7,7 +8,7 @@ MySQL5.7
 esbuild
 
 ## CSS
-Sass & Bootstrap
+Sass & Bootstrap5
 
 ## 環境構築方法
 
