@@ -1,0 +1,18 @@
+<h1>料理検索</h1>
+<%= form_with(url: {controller: "edamams", action: "index"}, method: :get) do |f| %>
+  <p>英語で検索してね〜</p>
+  <%= f.text_field :search %> <br>
+  <%= f.submit '検索する' %>
+<% end %>
+
+<% if @foods.present? && @foods["hits"].present? %>
+  <% @foods["hits"].first(5).each do |recipe| %>
+    <%= link_to recipe["recipe"]["label"], recipe["recipe"]["url"] %> <br>
+    <tr>
+      <%= recipe["recipe"]["calories"] %>cal <br>
+      <%= image_tag recipe["recipe"]["image"] %> <br>
+    </tr>
+  <% end %>
+<% else %>
+  <!-- データが取得できなかった場合の処理をここに記述 -->
+<% end %>
